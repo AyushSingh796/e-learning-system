@@ -10,7 +10,7 @@
     outline: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .2s linear;
+    transition: all .4s linear;
 }
 *::selection{
     background: #f39c12;
@@ -95,9 +95,6 @@ header #menu{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.popup{
-    top: 0;
 }
 .login-form form{
     width: 35rem;
@@ -222,7 +219,138 @@ section{
     left: 0;
     height: 15rem;
     width: 100%;
-    back
+}
+.registration-form{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 1000;
+    background:rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration-form form{
+    width: 35rem;
+    background: #fff;
+    margin: 0 2rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .3rem #333;
+    position: relative;
+}
+.registration-form form h3{
+    font-size: 3rem;
+    color: #f39c12;
+    padding: 1rem 0;
+}
+.registration-form form .box{
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color: #333;
+    text-transform: none;
+}
+.registration-form form .box::placeholder{
+    text-transform: capitalize;
+}
+.registration-form form .box:focus{
+    border-color: #f39c12;
+}
+.registration-form form .box:nth-child(6){
+    margin-bottom: 5rem;
+}
+.registration-form form .btn{
+    width: 100%;
+    margin: 2rem 0;
+}
+.registration-form form .btn:hover{
+    background: #444;
+}
+.registration-form form .fa-times{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #999;
+}
+.registration-form form .fa-times:hover{
+    color: #444;
+}
+.reg{
+    color: #f39c12;
+    font-size: 1.4rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.change-password{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 1000;
+    background:rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.change-password form{
+    width: 35rem;
+    background: #fff;
+    margin: 0 2rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .3rem #333;
+    position: relative;
+}
+.change-password form h3{
+    font-size: 2rem;
+    color: #f39c12;
+    padding: 1rem 0;
+}
+.change-password form .box{
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color: #333;
+    text-transform: none;
+}
+.change-password form .box::placeholder{
+    text-transform: capitalize;
+}
+.change-password form .box:focus{
+    border-color: #f39c12;
+}
+.change-password form .box:nth-child(6){
+    margin-bottom: 5rem;
+}
+.change-password form .btn{
+    width: 100%;
+    margin: 2rem 0;
+}
+.change-password form .btn:hover{
+    background: #444;
+}
+.change-password form .fa-times{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+}
+.change-password form .fa-times:hover{
+    color: #444;
 }
 
 
@@ -232,13 +360,9 @@ section{
 
 
 
-
-
-
-
-
-
-
+.popup{
+    top:0;
+}
 @media(max-width:768px){
     html{
         font-size: 55%;
