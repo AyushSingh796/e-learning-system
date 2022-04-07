@@ -46,10 +46,10 @@
     <div class="login-form">
         <form action="">
             <h3>login</h3>
-            <input type="email" placeholder="username" class="box">
-            <input type="password" placeholder="password" class="box">
-            <p>forget password? <a href="#">click here</a></p>
-            <p>don't have an account? <a href="#">register now</a></p>
+            <input type="email" placeholder="username" class="box" required>
+            <input type="password" placeholder="password" class="box" required>
+            <p>forget password? <a onclick="somefunction2()" href="#">click here</a></p>
+            <p>don't have an account? <a onclick="somefunction1()" href="#">Register Here</a></p>
             <input type="submit" class="btn" value="login">
             <i class="fas fa-times"></i>
         </form>
@@ -67,7 +67,54 @@
 
     </section>
 
+    <!-- Registration Form -->
+    <div class="registration-form">
+        <form onsubmit="validate()" action="">
+            <h3>Register</h3>
+            <input type="name" placeholder="Name" class="box" required>
+            <input type="contact" placeholder="Contact Number" class="box" required>
+            <input type="username" placeholder="Username" class="box" required>
+            <input type="password" placeholder="Password" class="box" required>
+            <input type="password" placeholder="Confirm Password" class="box" required>
+            <input type="submit" class="btn" value="Submit">
+            <i class="fas fa-times"></i>
+        </form>
+    </div>
 
+    <!-- Change Password -->
+    <div class="change-password">
+        <form action="">
+            <h3>Change Password</h3>
+            <input type="username" placeholder="Username" class="box" required>
+            <input type="contact" placeholder="Contact Number" class="box" required>
+            <input type="studentid" placeholder="Student Id" class="box" required>
+            <input type="password" placeholder="New Password" class="box" required>
+            <input type="password" placeholder="Confirm New Password" class="box" required>
+            <input type="submit" class="btn" value="Change">
+            <i class="fas fa-times"></i>
+        </form>
+    </div>
+
+
+    <script>
+        function somefunction1(){
+            $('.login-form').removeClass('popup');
+            $('.registration-form').addClass('popup');
+    }
+    function somefunction2(){
+            $('.login-form').removeClass('popup');
+            $('.change-password').addClass('popup');
+    }
+    function validate(){  
+        var num=document.contact.value;  
+        if (isNaN(num)){  
+        document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+        return false;  
+    }else{  
+        return true;  
+    }  
+}  
+    </script>
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
